@@ -1,0 +1,496 @@
+
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+ caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+/* Style */
+
+:root {
+    --primary: rgb(22, 22, 58);
+    --secondary: rgb(206, 59, 38);
+}
+
+html {
+    font-size: 1em;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav {
+    box-shadow: 0px 0.1px 10px white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--primary);
+    padding: 2rem;
+    z-index: 999;
+}
+
+.nav-main {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link {
+    display: flex;
+}
+
+.nav-link li {
+    padding: 0 2rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.nav-link li a {
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+.nav-link li a:hover {
+    color: var(--primary);
+    -webkit-text-stroke: 2px var(--secondary)
+}
+
+.banner {
+    background-image: url('../img/banner.jpg');
+    min-height: 43rem;
+    background-size: auto;
+    background-position: center;
+    width: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-social {
+    position: absolute;
+    left: 0;
+}
+
+.banner-social-link {
+    background-color: var(--primary);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 2px 2px 1px white;
+}
+
+.banner-social-link li a img{
+    /* background-color: rgb(206, 59, 38);
+    border-radius: 35px; */
+    width: 40px;
+    margin: 0.5rem;
+}
+
+.banner-social-link .link-github {
+    background-color: var(--secondary);
+    border-radius: 35px;
+}
+.banner-social-link .link-linkedin {
+    background-color: var(--secondary);
+   border-radius: 5px;
+}
+.banner-social-link .link-instagram {
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+.banner-social-link li a img:hover {
+    background-color: white;
+}
+
+.banner-content h1{
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: 20px;
+    color: white;
+    opacity: 0.8;
+    /* -webkit-text-stroke: 1px var(--primary); */
+}
+
+
+/* profil */
+.profil {
+    background-color: rgb(51, 51, 134);
+    min-height: 50rem;
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profil-wrapper {
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+}
+
+.profil-wrapper > div {
+    margin: 1rem;
+}
+
+.profil h2 {
+    text-align: center;
+    /* border-radius: 10px;  */
+    color: white;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.profil-biodata {
+    box-shadow: 7px 7px 1px black;
+    width: 30rem;
+    background-color: var(--primary);
+    padding: 2rem;
+    border-radius: 10px;
+    /* color: white; */
+    box-sizing: border-box;
+}
+
+
+.profil-photo img {
+    width: 150px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.biodata-content li span{
+    display: inline-block;
+    margin: 1rem 0;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.biodata-content li p {
+    box-shadow: 5px 5px 1px var(--secondary);
+    background-color: white;
+    padding: 1.5rem;
+    font-weight: 600;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+
+.profil-content h3,.profil-biodata h3 {
+    text-shadow: 5px 5px 1px var(--secondary);
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    /* margin-top: 20px; */
+}
+.profil-content {
+    box-shadow: 7px 7px 0px black;
+    background-color: var(--primary);
+    height: 200px;
+    padding: 2rem;
+    border-radius: 15px;
+    /* background-color: var(--secondary); */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.kemampuan {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start
+}
+
+.kemampuan div {
+    box-shadow: 5px 5px 1px var(--secondary);
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.kemampuan div:first-child {
+    margin-left: 0px;
+}
+
+/* tentang saya*/
+.tentang  {
+    background-color: var(--primary);
+    min-height: 37rem;
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+}
+
+
+.tentang-wrapper h2 {
+   border-radius: 10px; 
+   color: white;
+   font-weight: 700;
+   /* margin-top: 5rem; */
+   text-align: center;
+   font-size: 3rem;
+}
+
+.tentang-wrapper img {
+    border: 5px solid var(--primary);
+    box-shadow: 2px 2px 1px white;
+    margin-top: 60px;
+    margin-right: 150px;
+    width: 170px;
+    /* float: right; */
+}
+
+.tentang-content {
+    margin-top: 50px;
+}
+
+.tentang-content-first h3 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+
+
+.tentang-content-first {
+    padding: 0.5rem;
+    width: 45rem;
+    border-radius: 15px;
+    color: black;
+    /* background-color: var(--secondary); */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+} 
+
+.tentang-content-first p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    line-height: 40px;
+    text-align: left;
+}
+
+/* jadwal */
+
+.jadwal {
+    background-color: rgb(51, 51, 134);
+    padding: 5rem;
+    min-height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.jadwal h2 {
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+}
+
+.jadwal-wrapper {
+    margin-top: 50px;
+}
+
+.jadwal-content {
+    box-shadow: 7px 7px 1px black;
+    border-radius: 10px;
+    background-color: var(--primary);
+    padding: 20px;
+    border-spacing: 10px;
+}
+
+.jadwal-content th, td {
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    /* box-shadow: 3px 3px 1px white; */
+}
+
+.jadwal-content td {
+    box-shadow: 3px 3px 0px white;
+}
+
+.jadwal-content th {
+    color: white;
+    font-weight: 900;
+    background-color: rgb(51, 51, 134);
+    /* border-radius: 20px; */
+}
+
+
+/* hobi */
+.hobi {
+    background-color: var(--primary);
+    min-height: 35rem;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.hobi h2{
+    text-align: center;
+    font-weight: 700;
+    font-size: 3rem;
+    color: white;
+}
+
+.hobi-wrapper {
+    margin-top: 50px;
+}
+
+.hobi-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hobi-image img {
+    width: 15.625rem;
+    border-radius: 10px;
+}
+
+.hobi-content {
+    box-shadow: 7px 7px 1px black;
+    border-radius: 10px;
+    background-color: rgb(51, 51, 134);
+    padding: 2rem;
+    display: flex;
+}
+
+.hobi-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.hobi-info p {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+
+footer {
+    background-color: rgb(51, 51, 134);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    color: white;
+
+}
+
+
+
+
+/* pending */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 200px) and (max-width: 992px) {
+    body {
+        font-family: 'Source Sans Pro', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .banner {
+    background-image: url('../img/banner.jpg');
+    min-height: 43rem;
+    background-size: auto;
+    background-position: center;
+    width: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    }
+
+    .banner-content h1{
+        text-align: center;
+        margin: auto;
+        text-transform: uppercase;
+        font-style: italic;
+        font-size: 3rem;
+        font-weight: 900;
+        letter-spacing: 20px;
+        color: white;
+        opacity: 0.8;
+        /* -webkit-text-stroke: 1px var(--primary); */
+    }
+
+    .profil-wrapper {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
